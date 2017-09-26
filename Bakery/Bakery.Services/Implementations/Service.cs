@@ -34,7 +34,7 @@ namespace Bakery.Services.Implementations
 
         private static void SetCurrentPrice(ProductModel product)
         {
-            var priceCoef = 0.02m;
+            var priceCoef = 1;
             product.CurrentPrice = product.StartPrice;
 
             switch (product.Type)
@@ -44,7 +44,7 @@ namespace Bakery.Services.Implementations
                         product.CurrentPrice /= 2;
                     return;
                 case BakeryType.SourCream:
-                    priceCoef *= 2;
+                    priceCoef = 2;
                     break;
                 case BakeryType.Croissant:
                     break;
@@ -57,16 +57,12 @@ namespace Bakery.Services.Implementations
             }
 
             var totalHours = (DateTime.Now - product.BakingTime).Hours;
-            while (totalHours > 0)
-            {
-                product.CurrentPrice -= product.CurrentPrice * priceCoef;
-                totalHours--;
-            }
+            product.CurrentPrice = CalcPrice(product.StartPrice, totalHours, priceCoef);
         }
 
         private static void SetForecast(ProductModel product)
         {
-            var priceCoef = 0.02m;
+            var priceCoef = 1;
 
             switch (product.Type)
             {
@@ -77,7 +73,7 @@ namespace Bakery.Services.Implementations
                     product.NextPriceChangeTime = freshEnd;
                     return;
                 case BakeryType.SourCream:
-                    priceCoef *= 2;
+                    priceCoef = 2;
                     break;
                 case BakeryType.Croissant:
                     break;
@@ -91,13 +87,19 @@ namespace Bakery.Services.Implementations
 
             var totalHours = (DateTime.Now - product.BakingTime).Hours + 1;
             product.NextPriceChangeTime = product.BakingTime.AddHours(totalHours);
-            product.NextPrice = product.StartPrice;
+            product.NextPrice = CalcPrice(product.StartPrice, totalHours, priceCoef);
+        }
 
-            while (totalHours > 0)
+        private static decimal CalcPrice(decimal start, int hours, int coef)
+        {
+            var price = start;
+            var i = 1;
+            while (i <= hours)
             {
-                product.NextPrice -= product.NextPrice * priceCoef;
-                totalHours--;
+                price -= price * 0.02m * coef;
+                i++;
             }
+            return price;
         }
     }
 }
