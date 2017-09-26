@@ -1,18 +1,18 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using Bakery.Common.Infra.Enums;
 
-namespace Bakery.Database.Models
+namespace Bakery.Services.Models
 {
-    public class Product
+    public class ProductModel
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public BakeryType Type { get; set; }
         public DateTime BakingTime { get; set; }
         public int LifeHours { get; set; }
         public int FreshHours { get; set; }
-        [Range(0.1, 100)]
-        public decimal Price { get; set; }
+        public decimal StartPrice { get; set; }
+        public decimal CurrentPrice { get; set; }
+        public decimal NextPrice { get; set; }
+        public DateTime NextPriceChangeTime { get; set; }
     }
 }

@@ -18,7 +18,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Bakery.Common.DI\Bakery.Common.DI.csproj" />
     <ProjectReference Include="..\Bakery.Common.Infra\Bakery.Common.Infra.csproj" />
+    <ProjectReference Include="..\Bakery.Common\Bakery.Common.csproj" />
     <ProjectReference Include="..\Bakery.Database\Bakery.Database.csproj" />
+    <ProjectReference Include="..\Bakery.Repositories\Bakery.Repositories.csproj" />
+    <ProjectReference Include="..\Bakery.Services\Bakery.Services.csproj" />
   </ItemGroup>
 
 </Project>

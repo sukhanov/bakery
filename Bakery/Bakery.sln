@@ -3,23 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Web", "Bakery.Web\Bakery.Web.csproj", "{11957E26-C214-4192-B6C7-98D9EA5A9A42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bakery.Web", "Bakery.Web\Bakery.Web.csproj", "{11957E26-C214-4192-B6C7-98D9EA5A9A42}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Common", "0. Common", "{60C2BB96-609E-44E8-9C27-7F30AFFD8308}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Common.Infra", "Bakery.Common.Infra\Bakery.Common.Infra.csproj", "{A32D56D0-35B3-4469-BBEF-334816E5511C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bakery.Common.Infra", "Bakery.Common.Infra\Bakery.Common.Infra.csproj", "{A32D56D0-35B3-4469-BBEF-334816E5511C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Database", "1. Database", "{A9AE00AE-DC43-4246-BF27-2F394C23184D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Database", "Bakery.Database\Bakery.Database.csproj", "{9C6759B9-2BB2-4B51-A207-014A94D03BC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bakery.Database", "Bakery.Database\Bakery.Database.csproj", "{9C6759B9-2BB2-4B51-A207-014A94D03BC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Common.DI", "Bakery.Common.DI\Bakery.Common.DI.csproj", "{BFFEDB3D-F007-4C2B-9DEC-24212CE8C20B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bakery.Common.DI", "Bakery.Common.DI\Bakery.Common.DI.csproj", "{BFFEDB3D-F007-4C2B-9DEC-24212CE8C20B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Repositories", "2. Repositories", "{E852F973-215F-4326-B6C8-02FA744589D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Services", "3. Services", "{5D61612B-058C-460E-8E4D-AB0AA0F43B80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Client", "4. Client", "{90ACC825-A8F2-4983-B4DC-A5C612D15B4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Repositories", "Bakery.Repositories\Bakery.Repositories.csproj", "{233575D6-1EA8-4F8A-8D63-74C3B4359F3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Common", "Bakery.Common\Bakery.Common.csproj", "{D8BE9521-2041-40A9-8363-35423C0055E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Services", "Bakery.Services\Bakery.Services.csproj", "{8DF388AD-5E73-4134-BFA2-7EF1C5362939}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,18 @@ Global
 		{BFFEDB3D-F007-4C2B-9DEC-24212CE8C20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFFEDB3D-F007-4C2B-9DEC-24212CE8C20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFFEDB3D-F007-4C2B-9DEC-24212CE8C20B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{233575D6-1EA8-4F8A-8D63-74C3B4359F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{233575D6-1EA8-4F8A-8D63-74C3B4359F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{233575D6-1EA8-4F8A-8D63-74C3B4359F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{233575D6-1EA8-4F8A-8D63-74C3B4359F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BE9521-2041-40A9-8363-35423C0055E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BE9521-2041-40A9-8363-35423C0055E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BE9521-2041-40A9-8363-35423C0055E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BE9521-2041-40A9-8363-35423C0055E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF388AD-5E73-4134-BFA2-7EF1C5362939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF388AD-5E73-4134-BFA2-7EF1C5362939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF388AD-5E73-4134-BFA2-7EF1C5362939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF388AD-5E73-4134-BFA2-7EF1C5362939}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +70,9 @@ Global
 		{A32D56D0-35B3-4469-BBEF-334816E5511C} = {60C2BB96-609E-44E8-9C27-7F30AFFD8308}
 		{9C6759B9-2BB2-4B51-A207-014A94D03BC2} = {A9AE00AE-DC43-4246-BF27-2F394C23184D}
 		{BFFEDB3D-F007-4C2B-9DEC-24212CE8C20B} = {60C2BB96-609E-44E8-9C27-7F30AFFD8308}
+		{233575D6-1EA8-4F8A-8D63-74C3B4359F3A} = {E852F973-215F-4326-B6C8-02FA744589D8}
+		{D8BE9521-2041-40A9-8363-35423C0055E8} = {60C2BB96-609E-44E8-9C27-7F30AFFD8308}
+		{8DF388AD-5E73-4134-BFA2-7EF1C5362939} = {5D61612B-058C-460E-8E4D-AB0AA0F43B80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9AD3391-F00E-41CA-A4F0-304E90953B24}
