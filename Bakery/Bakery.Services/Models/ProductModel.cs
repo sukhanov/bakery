@@ -12,7 +12,7 @@ namespace Bakery.Services.Models
         public int FreshHours { get; set; }
         public decimal StartPrice { get; set; }
         public decimal CurrentPrice { get; set; }
-        public decimal NextPrice { get; set; }
-        public DateTime NextPriceChangeTime { get; set; }
+        public decimal? NextPrice { get; set; }
+        public DateTime? NextPriceChangeTime { get; set; }
     }
 }

@@ -2,9 +2,6 @@
 
 namespace Bakery.Common.Infra.Enums
 {
-    /// <summary>
-    /// Тип хлебобулочного изделия
-    /// </summary>
     public enum BakeryType
     {
         [Description("Круассан")]
